@@ -146,7 +146,7 @@ function swap(uint256 tokenXAmount, uint256 tokenYAmount, uint256 tokenMinimumOu
     }
 ```
 
-![Untitled](DEX%208d34030fa7d74aaf9bdacbfaef0914f3/Untitled.png)
+Y'=(X*Y)/(X+X_*0.999)
 
 결과적으로 bold처리 해놓은 부분을 수식으로 표현하자면 위와 같다
 
