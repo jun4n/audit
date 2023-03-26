@@ -15,6 +15,7 @@ function _getMaxBorrowCurrentDebtCheck(address user) internal view returns (uint
     }
 ```
 
+
 대출 가능한 수량을 결정할때 USDC의 가격이 일정하다고 생각했기 때문에 가능한 수식인데, 그럴일은 없지만 만약 ETH의 가치가 USDC의 가치보다 내려갈 경우 많은양의 USDC를 빌릴 수 있게 된다.
 
 ### PoC
@@ -127,7 +128,7 @@ Logs:
   Error: Assertion Failed
 ```
 
-![Untitled](%E1%84%80%E1%85%B5%E1%86%B7%E1%84%8B%E1%85%A7%E1%86%BC%E1%84%8B%E1%85%AE%E1%86%AB%20c2b3bd0b179e4c438d76beb10562ab48/Untitled.png)
+![Untitled](https://user-images.githubusercontent.com/127646846/227781431-04773b92-04f6-4bed-960f-f6ae8b883ff1.png)
 
 ## 담보 Withdraw 취약점
 
@@ -167,7 +168,8 @@ function withdraw(address tokenAddress, uint256 amount) external nonReentrant{
 
 dept가 있을 경우에는 require구문으로  담보의 가치를 확인하는데, 이전에도 그랬듯이 현재의 가격만을 고려하기 때문에 require문도 우회가 가능하다.
 
-![Untitled](%E1%84%80%E1%85%B5%E1%86%B7%E1%84%8B%E1%85%A7%E1%86%BC%E1%84%8B%E1%85%AE%E1%86%AB%20c2b3bd0b179e4c438d76beb10562ab48/Untitled%201.png)
+![Untitled 1](https://user-images.githubusercontent.com/127646846/227781412-ca7dcd55-00ab-4f61-93c0-23ae5445b4d9.png)
+
 
 빚이 있는 상황에서 withdraw를 할 시 require구문을 풀어보면 위와 같이 나온다.
 
@@ -214,5 +216,6 @@ Logs:
   After Withdraw ETH: 99999986666666666666666665
   After Withdraw USDC: 40000000000000000000000
 ```
+![Untitled 2](https://user-images.githubusercontent.com/127646846/227781390-57195572-56cc-4420-b013-0fe61ce124ff.png)
 
-![Untitled](%E1%84%80%E1%85%B5%E1%86%B7%E1%84%8B%E1%85%A7%E1%86%BC%E1%84%8B%E1%85%AE%E1%86%AB%20c2b3bd0b179e4c438d76beb10562ab48/Untitled%202.png)
+)
