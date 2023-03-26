@@ -1,7 +1,7 @@
 # 서지혜
 
 ## swap small amount round down
-
+#### Dex.sol:swap:35,44
 **Informational (파급력: Low, 공격 난이도: Low)**
 
 ```solidity
@@ -57,7 +57,7 @@ Logs:
 amount_를 구할때 분자와 분모에 10 ** 18을 곱해서 단위를 올려서 round down을 완화시킨다.
 
 ## addLiquidity Imbalance
-
+##### Dex.sol:addLiquidity:70-77
 ```solidity
 function addLiquidity(uint256 tokenXAmount, uint256 tokenYAmount, uint256 minimumLPTokenAmount) public returns (uint256){
     require(tokenXAmount > 0, "token x amount is 0");
