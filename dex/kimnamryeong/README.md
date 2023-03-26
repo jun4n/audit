@@ -1,7 +1,7 @@
 # 김남령
 
 ## minimumTokenAmount 등호 생략
-
+#### Dex.sol:removeLiquidity:151
 ****************Informational (공격 파급력: Low, 공격 난이도: Low)****************
 
 ```solidity
@@ -66,7 +66,7 @@ require(amountX >= _minimumTokenXAmount && amountY >= _minimumTokenYAmount, "INS
 ```
 
 ## **Swap Small Amount Round Down**
-
+#### Dex.sol:swap:37-38
 **Informational (공격 파급력: Low, 공격 난이도: Low)**
 
 ```solidity
