@@ -1,7 +1,7 @@
 # 임나라
 
 ## Imbalance AddLiquidity
-
+#### Dex.sol:addLiquidity:92
 **High (공격 파급력: Critical, 공격 난이도: Low)**
 
 ```solidity
@@ -139,7 +139,7 @@ Logs:
 tokenXAmount, tokenYAmount도 수정해주는 과정에서 imbalance로 인한 토큰 균형이 깨지는 것도 막았다.
 
 ## **Swap Small Amount Round Down**
-
+#### Dex.sol:swap:40
 **Informational (공격 파급력: Low, 공격 난이도: Low)**
 
 ```solidity
