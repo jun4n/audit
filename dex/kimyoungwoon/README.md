@@ -1,7 +1,7 @@
 # 김영운
 
 ## public transfer & mint LP token
-
+#### Dex.sol:transfer:172
 ****critical (공격 파급력: High, 공격 난이도: Low)****
 
 ```solidity
@@ -44,7 +44,7 @@ Logs:
 transfer함수의 가시성 지정자를 private으로 변경하고 토큰을 민팅할 때도 _mint함수를 이용해서 minting하는 방법으로 바꿔야 한다.
 
 ## Imbalance addLiqudity 풀 오염
-
+#### Dex.sol:addLiquidity:59-79
 **medium (파급력: medium, 공격 난이도: Medium)**
 
 ```solidity
