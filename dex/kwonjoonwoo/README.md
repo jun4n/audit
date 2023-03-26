@@ -1,7 +1,7 @@
 # 권준우
 
 ## swap small amount round down
-
+#### Dex.sol:swap:26,35
 **Informational (파급력: Low, 공격 난이도: Low)**
 
 ```solidity
@@ -91,7 +91,7 @@ Logs:
 oupoutAmount를 계산할때 분자 분모에 10**18을 곱해줘서 Round down을 완화시켜준다.
 
 ## AddLiquidity imbalance input
-
+#### Dex.sol:addLqiuidity:66-67
 **medium (파급력: medium, 공격 난이도: Medium)**
 
 ```solidity
