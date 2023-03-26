@@ -1,7 +1,7 @@
 # 허시원
 
 ## Swap Small Amount Round Down
-
+#### Dex.sol:swap:87
 **Informational (공격 파급력: Low, 공격 난이도: Low)**
 
 ```solidity
@@ -99,7 +99,7 @@ Logs:
 이전의 해결방안과 마찬가지로 10 ** 18을 분자 분모에 곱해줘서 round down을 최소화 시킬 수 있다.
 
 ## removeLiquidity Round Down
-
+#### Dex.sol:removeLiquidity:59-60
 **************Low (파급력: Low, 공격 난이도:Low)**************
 
 ```solidity
