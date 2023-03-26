@@ -1,7 +1,7 @@
 # 김지우
 
 ## public transfer & mint LP token
-
+#### Dex.sol:transfer:162
 ****critical (공격 파급력: High, 공격 난이도: Low)****
 
 ```solidity
@@ -44,7 +44,7 @@ transfer함수에서 _mint함수를 호출한다는 점, _mint함수를 호출�
 그렇기때문에 transfer함수를 오버라이딩 하지 않고, _mint함수를 호출해서 토큰을 민팅하는 방식으로 고치면 된다.
 
 ## **swap small amount round down**
-
+#### Dex.sol:swap:77,83
 **Informational (파급력: Low, 공격 난이도: Low)**
 
 ```solidity
@@ -148,7 +148,7 @@ function swap(uint256 tokenXAmount, uint256 tokenYAmount, uint256 tokenMinimumOu
 ouput_amount를 계산할 때 자릿수를 올려줘서 round down 되는 값을 최대한 보정해준다.
 
 ## AddLiquidity imbalance input
-
+#### Dex.sol:AddLquidity:119-125
 **medium (파급력: medium, 공격 난이도: Medium)**
 
 ```solidity
