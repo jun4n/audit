@@ -1,7 +1,7 @@
 # 최영현
 
-## LP Token mint imbalance(Dex.sol:addLiquidity:54)
-
+## LP Token mint imbalance
+#### Dex.sol:addLiquidity:54
 **High (공격 파급력: Critical, 공격 난이도: Low)**
 
 #### code
@@ -111,8 +111,8 @@ Logs:
 
 수정후 다시 test code를 돌려보면 위와 같이 의도한 수량만큼의 lp token과 rx, ry가 리턴됨을 확인할수 있다.
 
-## Swap Large Amount (Dex.sol:swap:25-44)
-
+## Swap Large Amount 
+#### swap:25-44
 ******************medium (공격 파급력: Low, 공격 난이도: Medium)******************
 
 ```solidity
@@ -181,8 +181,8 @@ Logs:
 1. outputAmount = (Y * (X_ * 0.999)) / (X + 0.999 * X_) ⇒ uniswap
 2. outputAmount = Y - ((X * Y) / (X + X_))*0.999 ⇒ CPMM(X*Y=K)
 
-## Swap Small Amount  Round Down(Dex.sol:swap:25-44)
-
+## Swap Small Amount  Round Down
+#### swap:25-44
 **Informational (공격 파급력: Low, 공격 난이도: Low)**
 
 ```solidity
