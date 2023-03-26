@@ -1,7 +1,7 @@
 # 구민재
 
 ## public transfer & mint LP token
-
+#### Dex.sol:transfer:105
 ****critical (공격 파급력: High, 공격 난이도: Low)****
 
 ```solidity
@@ -44,7 +44,7 @@ Logs:
 문제의 원인은 transfer함수를 오버라이딩 해서 _mint함수를 호출하고, 가시성 지정자가 public인 상황에 있기 때문에 transfer함수를 오버라이딩 하지 않고, _mint함수를 이용해서 민팅을 해야한다.
 
 ## addLiquidity Round down
-
+#### Dex.sol:addLiquidity:31
 ************************************low (파급력: medium, 공격 난이도: low)************************************
 
 ```
