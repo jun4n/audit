@@ -1,7 +1,7 @@
 # 황준태
 
 ## removeLiquidity LP token total supply유지 못함.
-
+#### Dex.sol:removeLiquidity
 **********************critical (파급력: High, 공격 난이도: Medium)**********************
 
 ```solidity
@@ -84,7 +84,7 @@ Logs:
 해당 취약점을 완화하기 위해서는 totalSupply를 저장하는 방식 보다 함수에서 즉각 totalSupply()함수를 호출해서 현재 발행된 LP token의 개수를 알아내는 방식이 권장된다.
 
 ## swap small amount round down
-
+#### Dex.sol:swap:82
 ********************Informational (파급력: Low, 공격 난이도: Low)********************
 
 ```solidity
@@ -182,7 +182,7 @@ Logs:
 outputAmount의 분자와 분모에 10 ** 18을 곱해줘서 나누기로 인한 round down을 완화시켜줄 수 있다.
 
 ## AddLiquidity imbalance input
-
+#### Dex.sol:addLiquidity:202-214
 ******************************medium (파급력: medium, 공격 난이도: Medium)******************************
 
 ```solidity
