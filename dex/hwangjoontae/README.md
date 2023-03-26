@@ -233,7 +233,7 @@ function testManyETH() external {
         uint lp = dex.addLiquidity(8000000 ether, 1 wei, 0);
         uint outputUSDC = dex.swap(0, 1000 ether, 0);
         console.log("outputUSDC: %d", outputUSDC);
-        console.log("100*4000: %d", 100 * 4000 ether);
+        console.log("1000*4000: %d", 1000 * 4000 ether);
         vm.stopPrank();
     }
 ```
@@ -242,7 +242,7 @@ function testManyETH() external {
 [PASS] testManyETH() (gas: 295920)
 Logs:
   outputUSDC: 5996998499249624812403203
-  100*4000: 400000000000000000000000
+  100*4000: 4000000000000000000000000
 ```
 
 결과적으로 기존에 슬리피지를 제외하고 swap해서 얻을 수 있는 가격과도 비교가 안될 만큼 많은양의 USDC를 얻을 수 있게 된다.
@@ -288,7 +288,7 @@ function addLiquidity(uint256 tokenXAmount, uint256 tokenYAmount, uint256 minimu
 [PASS] testManyETH() (gas: 296318)
 Logs:
   outputUSDC: 1998999499749874937469733
-  100*4000: 400000000000000000000000
+  1000*4000: 4000000000000000000000000
 ```
 
 x, y의 양을 기준으로 잡은 토큰으로 계산해서 그 이상은 받지 않도록 수정한다.
