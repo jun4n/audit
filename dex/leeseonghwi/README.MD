@@ -1,7 +1,7 @@
 # 이성휘
 
 ## lptoken 계산 실수
-
+#### Dex.sol:addLiquidity:124-142
 **********************critical (파급력: high, 공격 난이도: medium)**********************
 
 ```solidity
@@ -165,7 +165,7 @@ Logs:
 ```
 
 ## RemoveLiquidity Round Down
-
+#### Dex.sol:removeLiquidity:172-173
 ****************low (파급력: low, 공격 난이도: low)****************
 
 ```solidity
