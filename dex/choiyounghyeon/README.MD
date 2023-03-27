@@ -14,7 +14,7 @@ function addLiquidity(uint256 tokenXAmount, uint256 tokenYAmount, uint256 minimu
         (, uint256 reserveY) = amount_update();
 
         if(totalSupply() == 0){ LPTokenAmount = tokenXAmount * tokenYAmount / 10**18;}
-        **else{ LPTokenAmount = totalSupply() * tokenXAmount / reserveX;}**
+        else{ LPTokenAmount = totalSupply() * tokenXAmount / reserveX;}
 
         require(minimumLPTokenAmount <= LPTokenAmount);
 
