@@ -6,9 +6,9 @@
 
 ```solidity
 function _getMaxBorrowCurrentDebtCheck(address user) internal view returns (uint256) {
-        **uint256 ethCollateral = userBalances[user].collateral;
+        uint256 ethCollateral = userBalances[user].collateral;
         uint256 collateralValueInUsdc = (ethCollateral.mul(priceOracle.getPrice(address(0)))).div(1e18);
-        uint256 maxBorrowAmount = (collateralValueInUsdc.mul(LTV)).div(100);**
+        uint256 maxBorrowAmount = (collateralValueInUsdc.mul(LTV)).div(100);
         uint256 currentDebt = userBalances[user].debt;
 
         return maxBorrowAmount > currentDebt ? maxBorrowAmount - currentDebt : 0;
