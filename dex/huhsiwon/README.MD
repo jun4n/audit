@@ -69,7 +69,8 @@ function swap(uint256 tokenXAmount, uint256 tokenYAmount, uint256 tokenMinimumOu
         tokenY_in_LP = tokenY.balanceOf(address(this));
         
         if(tokenXAmount != 0){
-            **outputAmount = tokenY_in_LP * ((tokenXAmount * 10 ** 18) * 999 / 1000) / ((tokenX_in_LP * 10 ** 18) + ((tokenXAmount * 10 ** 18) * 999 / 1000));**
+            outputAmount = tokenY_in_LP * ((tokenXAmount * 10 ** 18) * 999 / 1000) / 
+                                ((tokenX_in_LP * 10 ** 18) + ((tokenXAmount * 10 ** 18) * 999 / 1000));
 
             require(outputAmount >= tokenMinimumOutputAmount, "minimum ouput amount check failed");
             tokenY_in_LP -= outputAmount ;
