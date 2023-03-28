@@ -39,18 +39,18 @@ function addLiquidity(
             if (sqrt((reservedX * reservedY) / (curX * curY)) == 1) {
                 reward = liquidity;
             } else {
-                **reward =
+                reward =
                     (sqrt((reservedX * reservedY) / (curX * curY)) - 1) *
-                    reward;**
+                    reward;
             }
             setReserve(optToken, tokenYAmount);
         } else {
             if (sqrt((reservedX * reservedY) / (curX * curY)) == 1) {
                 reward = liquidity;
             } else {
-                **reward =
+                reward =
                     (sqrt((reservedX * reservedY) / (curX * curY)) - 1) *
-                     ;**
+                     ;
             }
             setReserve(tokenXAmount, optToken);
         }
