@@ -57,7 +57,7 @@ Logs:
 **********************************critical (파급력: high, 공격 난이도: medium)**********************************
 
 ```solidity
-function liquidate(address user, address tokenAddress, uint256 amount) external nonReentrant{
+ function liquidate(address user, address tokenAddress, uint256 amount) external nonReentrant{
         require(amount > 0, "Liquidation amount must be greater than 0");
         require(msg.sender != user, "Cannot liquidate yourself");
         require(tokenAddress == address(usdc), "Only USDC can be used to liquidate");
@@ -72,6 +72,7 @@ function liquidate(address user, address tokenAddress, uint256 amount) external 
         console.logBool((_oETH * userBalances[user].collateral * LIQUIDATION_THRESHOLD).div(100) < userBalances[user].debt.mul(_oUSDC));
         console.log("%d, %d",(_oETH * userBalances[user].collateral * LIQUIDATION_THRESHOLD).div(100), userBalances[user].debt.mul(_oUSDC));
         
+        require((_oETH * userBalances[user].collateral * LIQUIDATION_THRESHOLD).div(100) < userBalances[user].debt.mul(_oUSDC), "Cannot liquidate a healthy user2");
         require((userBalances[user].debt * 25).div(100) >= amount, "Cannot liquidate a healthy user3");
 
         uint256 ethAmountToTransfer = amount * userBalances[user].collateral.div(userBalances[user].debt);
